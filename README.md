@@ -70,7 +70,7 @@ Lower-importance indicators:
 ## Troll Farm Indicators
 **What we Look For:**
 - 10+ accounts posting the exact same message (exact text match)
--  >50% of those accounts classified as bots
+-  over 50% of those accounts classified as bots
 - Original tweets only (retweets excluded)
 
 ---
@@ -125,4 +125,4 @@ python3 main.py
 2. **False Positives:** Users that post a lot may score high
 3. **Text Normalization Matching:** Troll farm detection uses normalized text (lowercase, URL removal, whitespace trimming), so may miss coordinated campaigns with synonym substitution or semantic variations
 
-**NOTE: High scores don't prove bot status, so you should always verify manually**
+# NOTE: High/low scores don't always prove bot/human status, so you should always verify manually
