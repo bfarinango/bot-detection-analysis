@@ -17,7 +17,7 @@ https://github.com/sinking8/x-24-us-election
 This project implements a rule-based bot detection system for Twitter/X accounts using behavioral analysis. Unlike black-box machine learning approaches, we implemented a tiered system based off common traits we found amongst bots. To identify potential bots, we look for 16 distinct behavioral indicators organized into three tiers.
 
 The purpose of this repository is to detect bots and troll farms during the 2024 US Presidential Election.
----
+
 
 ## Key Features
 
