@@ -70,7 +70,7 @@ Lower-importance indicators:
 ## Troll Farm Indicators
 **What we Look For:**
 - 10+ accounts posting the exact same message (exact text match)
-- >50% of those accounts classified as bots
+-  >50% of those accounts classified as bots
 - Original tweets only (retweets excluded)
 
 ---
