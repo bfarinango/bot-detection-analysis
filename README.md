@@ -10,17 +10,14 @@ University of Southern California
 GitHub Repo containing the Dataset:
 https://github.com/sinking8/x-24-us-election
 
----
 
 ## Project Overview
-
 This project implements a rule-based bot detection system for Twitter/X accounts using behavioral analysis. Unlike black-box machine learning approaches, we implemented a tiered system based off common traits we found amongst bots. To identify potential bots, we look for 16 distinct behavioral indicators organized into three tiers.
 
 The purpose of this repository is to detect bots and troll farms during the 2024 US Presidential Election.
 
 
 ## Key Features
-
 - **16 Bot Detection Indicators** organized into 3 tiers by level of importance
 - **User-level Analysis** (aggregates tweet-level data by account)
 - **Tiered Scoring System** (0-185 points with clear thresholds)
@@ -29,7 +26,6 @@ The purpose of this repository is to detect bots and troll farms during the 2024
 ---
 
 ## Methodology
-
 ### User Scoring System
 - **0-35 points:** Likely Human-- normal user behavior, low bot indicators
 - **36-60 points:** Suspicious-- user has some concerning traits associated with bots, needs review
@@ -38,7 +34,6 @@ The purpose of this repository is to detect bots and troll farms during the 2024
 
 
 ### Detection Criteria
-
 #### **TIER 1 (15 points each, max 135)**
 High-importance indicators of bot behavior:
 
@@ -66,14 +61,13 @@ Lower-importance indicators:
 3. **Profile Completeness:** Empty bio + no location = 5 pts
 4. **Mention Spam:** >3 mentions per tweet = 5 pts
 
-### Special Rules
 
+### Special Rules
 - **Verified Accounts:** Receive 25% score reduction
 
 ---
 
-### Troll Farm Indicators
-
+## Troll Farm Indicators
 **What we Look For:**
 - 10+ accounts posting the exact same message (exact text match)
 - >50% of those accounts classified as bots
@@ -82,23 +76,17 @@ Lower-importance indicators:
 ---
 
 ## Installation & Setup
-
 ### Prerequisites
-
 - Python 3.8 or higher
 
 ### Installation
-
 pip install -r requirements.txt
 
 
 ### Running
-
 python3 main.py
 
-
 ### Data Files
-
 1. **user_aggregated_data.csv**
    - User-level aggregation of all tweets
    - Contains: username, follower counts, all tweets lists, profile info
@@ -133,11 +121,8 @@ python3 main.py
 
 
 ### Limitations
-
 1. **Rule-based System:** We may miss complex bots that are more fine-tuned to mimic human behavior
 2. **False Positives:** Users that post a lot may score high
 3. **Text Normalization Matching:** Troll farm detection uses normalized text (lowercase, URL removal, whitespace trimming), so may miss coordinated campaigns with synonym substitution or semantic variations
 
-
-
-NOTE: High scores don't prove bot status, so you should always verify manually
+**NOTE: High scores don't prove bot status, so you should always verify manually**
